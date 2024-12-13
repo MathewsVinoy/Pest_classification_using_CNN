@@ -1,0 +1,12 @@
+body,
+html {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background-image: url("img/line-ants-walking-across-pathway_14117-743105.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
