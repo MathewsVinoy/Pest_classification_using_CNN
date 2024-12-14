@@ -4,28 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/index.css')}}"
+    />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="navbar-container">
-        <a href="#" class="brand-logo">Logo</a>
-        <button class="menu-toggle" id="menuToggle">&#9776;</button>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#" class="cts">Model</a></li>
-        </ul>
+    <div class="background">
+      <nav class="navbar">
+        <div class="navbar-container">
+          <a href="#" class="brand-logo">Logo</a>
+          <button class="menu-toggle" id="menuToggle">&#9776;</button>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" class="cts">Model</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="main-content">
+        <h1>Effortless Pest Identification</h1>
+        <p>
+          Upload a pest photo for instant insights and solutions. Protect your
+          home with our reliable image recognition platform.
+        </p>
+        <button class="start-btn"><a href="/model">Start</a></button>
       </div>
-    </nav>
-    <main class="main-content">
-      <h1>Effortless Pest Identification</h1>
-      <p>
-        Upload a pest photo for instant insights and solutions. Protect your
-        home with our reliable image recognition platform.
-      </p>
-      <button class="start-btn">Start</button>
-    </main>
-    <script src="js/script.js"></script>
+    </div>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
   </body>
 </html>
