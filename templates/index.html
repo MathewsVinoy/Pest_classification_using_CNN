@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="others/index.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -29,9 +30,13 @@
           Upload a pest photo for instant insights and solutions. Protect your
           home with our reliable image recognition platform.
         </p>
-        <button class="start-btn"><a href="/model">Start</a></button>
+        <button class="start-btn">
+          <a href="/model" class="model">Start</a>
+        </button>
       </div>
     </div>
+    <div></div>
     <script src="{{ url_for('static', filename='script.js')}}"></script>
+    <script src="others/script.js"></script>
   </body>
 </html>
