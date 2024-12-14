@@ -1,12 +1,146 @@
+/* General Reset */
 body,
-html {
+ul,
+li,
+a,
+button {
   margin: 0;
-  height: 100%;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 body {
-  background-image: url("img/line-ants-walking-across-pathway_14117-743105.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.navbar {
+  background-color: transparent;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.cts {
+  padding: 9px 25px;
+  color: rgb(2, 2, 92);
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(55, 197, 55);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links li a {
+  color: #333;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Button Styles */
+.menu-toggle {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  display: none;
+}
+
+.main-content {
+  margin-top: 50px;
+  padding-top: 80px;
+}
+
+.main-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 10px 0 20px;
+}
+
+.start-btn {
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: rgb(2, 2, 92);
+  background-color: rgb(55, 197, 55);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  color: rgb(2, 2, 92);
+  background-color: #218838;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: left;
+  }
+  .cts {
+    background-color: white;
+  }
 }

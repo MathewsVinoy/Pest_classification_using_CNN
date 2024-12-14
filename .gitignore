@@ -188,3 +188,4 @@ pyrightconfig.json
 data/
 others/
 models/
+templates/css/others.css

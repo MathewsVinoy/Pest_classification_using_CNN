@@ -3,19 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
+    <title>Responsive Navbar</title>
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <nav class="navbar">
-      <ul class="list_ul">
-        <li>Home</li>
-        <li>about</li>
-        <li>model</li>
-      </ul>
+      <div class="navbar-container">
+        <a href="#" class="brand-logo">Logo</a>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#" class="cts">Model</a></li>
+        </ul>
+      </div>
     </nav>
-    <div>
-      <a href="/model">Start</a>
-    </div>
+    <main class="main-content">
+      <h1>Effortless Pest Identification</h1>
+      <p>
+        Upload a pest photo for instant insights and solutions. Protect your
+        home with our reliable image recognition platform.
+      </p>
+      <button class="start-btn">Start</button>
+    </main>
+    <script src="js/script.js"></script>
   </body>
 </html>
