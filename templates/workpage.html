@@ -4,16 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main Page</title>
+    <link rel="stylesheet" href="others/others.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/workpage.css')}}"
+    />
   </head>
   <body>
-    <form method="post" enctype="multipart/form-data">
-      <input type="file" name="file" />
-      <input type="submit" value="Upload" />
-    </form>
-    <div>
-      {% if output %}
-      <h1>Output = {{ output }}</h1>
-      {% endif %}
+    <div class="background">
+      <nav class="navbar">
+        <div class="navbar-container">
+          <a href="#" class="brand-logo">Logo</a>
+          <button class="menu-toggle" id="menuToggle">&#9776;</button>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" class="cts">Model</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="bugs bugs-1"></div>
+      <div class="bugs bugs-2"></div>
+      <div class="bugs bugs-3"></div>
+      <div class="container">
+        <h1>Upload To Identify Pest</h1>
+        <form method="post" enctype="multipart/form-data">
+          <div>
+            <label for="file-upload" class="custom-btn">Upload Files</label>
+            <span id="file-name">No file selected</span>
+            <input type="file" name="file" id="file-upload" />
+          </div>
+          <br />
+          <button type="submit" class="submit-btn" value="Upload">
+            Submit
+          </button>
+        </form>
+        <div class="pred">
+          {% if output %}
+          <h1>Output = {{ output }}</h1>
+          {% endif %}
+        </div>
+      </div>
     </div>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+    <script src="others/script.js"></script>
   </body>
 </html>

@@ -1,4 +1,8 @@
-/* General Reset */
+body {
+  background-color: #ffe7c8;
+  margin: 0;
+  color: rgb(10, 10, 102);
+}
 body,
 ul,
 li,
@@ -11,12 +15,6 @@ button {
   box-sizing: border-box;
 }
 
-body {
-  color: #ffe7c8;
-  font-family: Arial, sans-serif;
-  background-color: #ffe7c8;
-  text-align: center;
-}
 .background {
   display: grid;
   place-items: center;
@@ -24,7 +22,6 @@ body {
   height: 100vh;
   background-color: #ffe7c8;
 }
-
 .navbar {
   background-color: #ffe7c8;
   position: fixed;
@@ -50,43 +47,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-.cloud {
-  position: absolute;
-  width: 200;
-  height: 100;
-  opacity: 0.5;
-}
-.cloud-1 {
-  background-image: url("img/cloud1.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 350px;
-  height: 70px;
-  top: 10%;
-  left: 3%;
-}
-.cloud-2 {
-  background-image: url("img/cloud2.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 400px;
-  height: 120px;
-  top: 35%;
-  right: 10%;
-}
-.cloud-3 {
-  background-image: url("img/cloud3.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 450px;
-  height: 120px;
-  bottom: 2%;
-  left: 25%;
-}
 .brand-logo {
   font-size: 1.8rem;
   font-weight: bold;
@@ -105,7 +65,6 @@ body {
 a {
   color: rgb(10, 10, 102);
 }
-
 .nav-links li a {
   font-size: 1rem;
 
@@ -128,44 +87,56 @@ a {
   cursor: pointer;
   display: none;
 }
-
-.main-content {
-  width: 80%;
-  height: 50vh;
-  padding-top: 80px;
+input[type="file"] {
+  display: none;
 }
-
-.main-content h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: rgb(10, 10, 102);
-}
-
-.main-content p {
-  font-size: 1.2rem;
-  color: rgb(10, 10, 102);
-  margin: 10px 0 20px;
-}
-
-.start-btn {
-  padding: 10px 30px;
-  font-size: 1rem;
-  color: #ffe7c8;
+.custom-btn,
+.submit-btn {
+  display: inline-block;
   background-color: rgb(10, 10, 102);
+  color: #ffe7c8;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 4px;
   border: none;
-  border-radius: 50px;
   cursor: pointer;
 }
-.model {
-  color: #ffe7c8;
+.container {
+  position: absolute;
+  width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px;
+}
+.bugs {
+  background-image: url("img/bugs.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  width: 200;
+  height: 100;
+  opacity: 0.5;
+}
+.bugs-1 {
+  top: 10%;
+  left: 3%;
+}
+.bugs-2 {
+  top: 35%;
+  right: 10%;
+}
+.bugs-3 {
+  bottom: 2%;
+  left: 25%;
 }
 
-.start-btn:hover {
-  color: #ffe7c8;
-  background-color: rgb(2, 2, 66);
-}
-
-/* Mobile Styles */
+/*resposive*/
 @media (max-width: 768px) {
   .menu-toggle {
     color: rgb(2, 2, 66);
@@ -196,20 +167,18 @@ a {
     color: rgb(2, 2, 66);
     background-color: #ffe7c8;
   }
-  .cloud-1 {
-    width: 220px;
-    height: 52px;
+  .container {
+    width: 300px;
   }
-  .cloud-2 {
-    width: 210px;
-    height: 62px;
+  .bugs {
+    height: 50px;
+    width: 50px;
   }
-  .cloud-3 {
-    width: 225px;
-    height: 60px;
+  .bugs-2 {
+    width: 0px;
+    height: 0px;
   }
 }
-
 @keyframes moveCloud {
   0% {
     transform: translateX(0);
@@ -219,6 +188,6 @@ a {
   }
 }
 
-.cloud {
+.bugs {
   animation: moveCloud 5s infinite alternate ease-in-out;
 }

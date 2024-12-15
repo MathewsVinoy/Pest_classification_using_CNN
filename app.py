@@ -1,7 +1,7 @@
 import os
 from model import Model
 from werkzeug.utils import secure_filename
-from flask import Flask, render_template, redirect,request,url_for
+from flask import Flask, render_template, redirect,request,url_for, flash
 
 ALLOWED_FILES = {'jpg','png','jpeg'}
 UPLOAD_FOLDER = 'uploaded/'
