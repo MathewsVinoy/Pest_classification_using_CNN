@@ -75,7 +75,7 @@ a {
 .nav-links li a:hover {
   border-radius: 10px;
   background-color: #d1cf6a;
-  color: #333;
+  color: rgb(2, 2, 66);
 }
 
 /* Button Styles */
