@@ -1,5 +1,5 @@
 import os
-from model import Model
+from main import Model
 from werkzeug.utils import secure_filename
 from flask import Flask, render_template, redirect,request,url_for, flash
 
