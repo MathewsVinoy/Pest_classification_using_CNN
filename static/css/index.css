@@ -118,7 +118,6 @@ a {
   color: #333;
 }
 
-/* Button Styles */
 .menu-toggle {
   font-size: 1.8rem;
   background: none;
@@ -164,7 +163,6 @@ a {
   background-color: rgb(2, 2, 66);
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
   .menu-toggle {
     color: rgb(2, 2, 66);
