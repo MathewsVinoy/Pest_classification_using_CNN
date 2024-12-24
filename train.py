@@ -8,11 +8,12 @@ from torchvision.transforms import v2
 from torch import nn
 from tqdm import tqdm
 from restnet34 import ResNet34
+from model import TinyVGG
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 BATCHS = 32
 
-data_path = Path("data_new/new/")
+data_path = Path("data/")
 train_dir = data_path / "train"
 test_dir = data_path / "test"
 
@@ -31,9 +32,10 @@ temp=train_data[1]
 train_dataloader = DataLoader(dataset=train_data, batch_size=BATCHS, num_workers=0, shuffle=True)
 test_dataloader = DataLoader(dataset=test_data, batch_size=BATCHS, num_workers=0, shuffle=False)
 
-model = ResNet34(num_classes=len(class_names))
+# model = ResNet34(num_classes=len(class_names))
+model=TinyVGG(input_shape=3,output_shape=len(class_names),hidden_units=10)
 
-EPOCHS = 15
+EPOCHS = 10
 loss_fn = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
@@ -63,7 +65,7 @@ for epoch in tqdm(range(EPOCHS)):
     print(f"Epoch {epoch}, train loss {train_loss / len(train_dataloader)}, test loss {test_loss / len(test_dataloader)}")
 
 MODEL_PATH = Path("models")
-MODEL_NAME = "model_resnet_aug_1.pth"
+MODEL_NAME = "test.pth"
 MODEL_SAVE_PATH = MODEL_PATH / MODEL_NAME
 
 
